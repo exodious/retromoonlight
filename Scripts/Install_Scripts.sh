@@ -2,7 +2,7 @@
 
 set -euo pipefail
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-MOONLIGHT_ROMS_DIR="~pi/RetroPie/roms/moonlight"
+MOONLIGHT_ROMS_DIR=${HOME}/RetroPie/roms/moonlight
 
 echo -e "\nCreating Refresh script in Moonlight..."
 

@@ -1,7 +1,7 @@
     <system>
         <name>moonlight</name>
         <fullname>Moonlight</fullname>
-        <path>~pi/RetroPie/roms/moonlight</path>
+        <path>/home/pi/RetroPie/roms/moonlight</path>
         <extension>.sh .SH</extension>
         <command>%ROM%</command>
         <platform>pc</platform>

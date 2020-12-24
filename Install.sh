@@ -45,7 +45,9 @@ while true; do
             ;;
         7)
             echo -e "\nRemoving all Moonlight launch scripts..."
-            rm -rf "~pi/RetroPie/roms/moonlight"
+            if [[ -d ${HOME}/RetroPie/roms/moonlight ]]; then
+                rm -rf ${HOME}/RetroPie/roms/moonlight
+            fi
             ;;
         8)
             exit 0
