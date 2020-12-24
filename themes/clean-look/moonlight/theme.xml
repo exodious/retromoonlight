@@ -11,16 +11,16 @@
 		<image name="logo">
 			<path>./art/moonlight.svg</path>
         </image>
-		
+
 		<helpsystem name="help">
 			<textColor>ffffff88</textColor>
 			<iconColor>ffffff88</iconColor>
 		</helpsystem>
-		
+
 	</view>
 
 	<view name="basic, detailed">
-	
+
 		<text name="system_name_1" extra="true">
 			<text>Moonlight</text>
 			<forceUppercase>1</forceUppercase>
@@ -42,18 +42,18 @@
 	</view>
 
 	<view name="basic">
-	
+
 		<textlist name="gamelist">
 			<pos>0.025 0.22</pos>
 			<size>0.950 0.68</size>
 			<alignment>center</alignment>
 			<horizontalMargin>0.01</horizontalMargin>
 		</textlist>
-		
+
 	</view>
 
 	<view name="detailed">
-	
+
 <!-- measuring rectangle
 		<image name="measure" extra="true">
 			<pos>0.6 0.05</pos>
@@ -61,7 +61,7 @@
 			<size>0.24 0.61</size>
 			<path>./../art/white.png</path>
 			<color>ff00ff</color>
-		</image> 
+		</image>
 -->
 
 		<image name="md_image">
@@ -70,15 +70,15 @@
  -->			<maxSize>0.445 0.601</maxSize>
 			<origin>0 0</origin>
 		</image>
-		
+
 		<text name="md_lbl_rating">
 			<pos>2 2</pos>
 		</text>
-		
+
 		<text name="md_lbl_releasedate">
 			<pos>2 2</pos>
 		</text>
-		
+
 		<text name="md_lbl_developer">
 			<pos>2 2</pos>
 			<size>0.133 0.04</size>
@@ -88,11 +88,11 @@
 			<pos>2 2</pos>
 			<size>0.133 0.04</size>
 		</text>
-		
+
 		<text name="md_lbl_genre">
 			<pos>2 2</pos>
 		</text>
-		
+
 		<text name="md_lbl_players">
 			<pos>2 2</pos>
 		</text>
@@ -104,7 +104,7 @@
 		<text name="md_lbl_playcount">
 			<pos>2 2</pos>
 		</text>
-		
+
 		<text name="md_playcount">
 			<pos>2 2</pos>
 		</text>
@@ -112,11 +112,11 @@
 		<datetime name="md_lastplayed">
 			<pos>2 2</pos>
 		</datetime>
-		
+
 		<text name="md_players">
 			<pos>2 2</pos>
 		</text>
-		
+
 		<text name="md_genre">
 			<pos>2 2</pos>
 		</text>
@@ -124,27 +124,27 @@
 		<text name="md_publisher">
 			<pos>2 2</pos>
 		</text>
-		
+
 		<text name="md_developer">
 			<pos>2 2</pos>
 		</text>
-		
+
 		<datetime name="md_releasedate">
 			<pos>2 2</pos>
 		</datetime>
-		
+
 		<rating name="md_rating">
 			<pos>2 2</pos>
 			<size>0.028 0.028</size>
 			<filledPath>./../art/star_filled_spacing.svg</filledPath>
 			<unfilledPath>./../art/star_hollow_3_spacing.svg</unfilledPath>
 		</rating>
-		
+
 		<text name="md_description">
 			<size>0.3 0.3</size>
 			<pos>2 2</pos>
 		</text>
-		
+
 		<textlist name="gamelist">
 			<pos>0.555 0.22</pos>
 			<size>0.450 0.68</size>
@@ -153,5 +153,5 @@
 		</textlist>
 
 	</view>
-	
+
 </theme>

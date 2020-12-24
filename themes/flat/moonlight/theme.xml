@@ -15,15 +15,15 @@
 	</view>
 
 	<view name="basic, detailed, video">
-	
+
 		<image name="logo">
 			<path>./systems.svg</path>
 		</image>
-		
+
 		<textlist name="gamelist">
 			<selectorColor>1f70c1</selectorColor>
-		</textlist>	
-		
+		</textlist>
+
 		<text name="system_name_1" extra="true">
 			<text>Moonlight</text>
 			<forceUppercase>1</forceUppercase>
@@ -34,9 +34,9 @@
 			<fontSize>0.077</fontSize>
 			<alignment>left</alignment>
 		</text>
-	
+
 	</view>
-	
+
 	<view name="detailed">
 	</view>
 
