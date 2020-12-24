@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 echo -e "\nCreating Refresh script in Moonlight..."
 
 if [ -d /home/pi/RetroPie/roms/moonlight ]

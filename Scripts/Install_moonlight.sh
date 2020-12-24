@@ -1,4 +1,7 @@
 #!/bin/bash
+
+set -euo pipefail
+
 rpiversion=`head -1 /etc/apt/sources.list | cut -d " " -f3`
 
 echo -e "\nAdding Moonlight to Sources List..."
