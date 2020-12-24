@@ -1,20 +1,20 @@
 #!/bin/bash
 
 set -euo pipefail
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+MOONLIGHT_ROMS_DIR="~pi/RetroPie/roms/moonlight"
 
 echo -e "\nCreating Refresh script in Moonlight..."
 
-if [ -d /home/pi/RetroPie/roms/moonlight ]
-then
-    rm -rf /home/pi/RetroPie/roms/moonlight
+if [[ -d $MOONLIGHT_ROMS_DIR ]]; then
+    rm -rf "$MOONLIGHT_ROMS_DIR"
 fi
 
-mkdir -p /home/pi/RetroPie/roms/moonlight
+mkdir -p "$MOONLIGHT_ROMS_DIR"
 
-chmod a+x ./Scripts/Refresh.sh
-cp ./Scripts/Refresh.sh /home/pi/RetroPie/roms/moonlight/Refresh.sh
-cp ./GenerateGamesList.py /home/pi/RetroPie/roms/moonlight/GenerateGamesList.py
-cp ./Scripts/Force_Quit.sh /home/pi/RetroPie/roms/moonlight/Force_Quit.sh
+install ${DIR}/Scripts/Refresh.sh ${MOONLIGHT_ROMS_DIR}/
+install ${DIR}/GenerateGamesList.py ${MOONLIGHT_ROMS_DIR}/
+install ${DIR}/Scripts/Force_Quit.sh ${MOONLIGHT_ROMS_DIR}/
 
 echo -e "Refresh script has been added to RetroPie\n"
 echo -e "After loading RetroPie, use the \"Refresh\" rom listed in the Moonlight system.\n"
