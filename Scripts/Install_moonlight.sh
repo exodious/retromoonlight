@@ -1,32 +1,35 @@
 #!/bin/bash
 
 set -euo pipefail
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 rpiversion=`head -1 /etc/apt/sources.list | cut -d " " -f3`
 
 echo -e "\nAdding Moonlight to Sources List..."
 
-if grep -q "deb http://archive.itimmer.nl/raspbian/moonlight $rpiversion main" /etc/apt/sources.list; then
+repo_url="http://archive.itimmer.nl/raspbian/moonlight"
+
+if apt-cache policy | grep -q "$repo_url"; then
     echo -e "NOTE: Moonlight Source Exists - Skipping"
 else
-    echo -e "Adding Moonlight to Sources List"
-    echo "deb http://archive.itimmer.nl/raspbian/moonlight $rpiversion main" >> /etc/apt/sources.list
+    sudo echo "deb $repo_url $rpiversion main" >> /etc/apt/sources.list.d/moonlight.list
+    echo -e "Added Moonlight to Sources List"
 fi
 
 echo -e "\nFetching and installing the GPG key....\n"
-
-wget http://archive.itimmer.nl/itimmer.gpg
-sudo apt-key add itimmer.gpg
-rm itimmer.gpg
+curl http://archive.itimmer.nl/itimmer.gpg | sudo apt-key add -
 
 echo -e "\nUpdating System..."
 sudo apt-get update -y
 
 echo -e "\nInstalling Moonlight..."
 sudo apt-get install moonlight-embedded -y
+
 echo -e "\nInstalling Gamepad..."
-moonlight_cfg_dir=~/.config/moonlight
+moonlight_cfg_dir="~pi/.config/moonlight"
 mkdir -p $moonlight_cfg_dir
 cp /usr/share/moonlight/gamecontrollerdb.txt $moonlight_cfg_dir
-cat ./gamepad/steel-series-duo.txt >> ${moonlight_cfg_dir}/gamecontrollerdb.txt
+cat ${DIR}/gamepad/steel-series-duo.txt >> ${moonlight_cfg_dir}/gamecontrollerdb.txt
+
 echo -e "\nMoonlight Installed!"
+r
