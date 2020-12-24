@@ -8,7 +8,7 @@ import stat
 RefreshListScript = 'Refresh.sh'
 
 BashHeader = '#!/bin/bash\n'
-StreamString = 'moonlight stream -1080 -fps 60 -app '
+StreamString = 'moonlight stream -mapping /home/pi/.config/moonlight/gamecontrollerdb.txt -1080 -fps 60 -app '
 roms_directory = '/home/pi/RetroPie/roms/moonlight/'
 
 

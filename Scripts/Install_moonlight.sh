@@ -25,11 +25,12 @@ sudo apt-get update -y
 echo -e "\nInstalling Moonlight..."
 sudo apt-get install moonlight-embedded -y
 
-echo -e "\nInstalling Gamepad..."
+echo -e "\nInstalling Gamepad Maps..."
 moonlight_cfg_dir=${HOME}/.config/moonlight
 mkdir -p $moonlight_cfg_dir
 cp /usr/share/moonlight/gamecontrollerdb.txt $moonlight_cfg_dir
-cat ${DIR}/gamepad/steel-series-duo.txt >> ${moonlight_cfg_dir}/gamecontrollerdb.txt
+for map in ${DIR}/gamepad/*.map; do
+    cat $map >> ${moonlight_cfg_dir}/gamecontrollerdb.txt
+done
 
 echo -e "\nMoonlight Installed!"
-r
