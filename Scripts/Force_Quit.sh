@@ -1,2 +1,2 @@
 #!/bin/bash
-/usr/bin/moonlight quit
+moonlight quit
