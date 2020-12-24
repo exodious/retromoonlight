@@ -7,7 +7,7 @@ There is already a [solution available](https://github.com/TechWizTime/moonlight
 
   1. Using this script RetroPie will have a list of games it can display with scraped meta-data from the web.
   2. I've found Steam BPM to be unreliable when used with RetroPie and I wanted something better.
-  
+
 ## Minimum Requirements ##
   * Raspberry Pi running Raspian Stretch (or latest RetroPie release)
   * GPU: Desktop: GeForce GTX 650 or higher desktop GPU.
@@ -22,9 +22,9 @@ There is already a [solution available](https://github.com/TechWizTime/moonlight
 #### On your raspberry pi: ####
   1. git clone https://github.com/joelghill/retromoonlight.git
   2. cd retromoonlight
-  3. sudo bash ./Install.sh. If a first time install, use option 1. Otherwise you can use the other options to install select components, or remove MoonLight from RetroPie
+  3. bash ./Install.sh. If a first time install, use option 1. Otherwise you can use the other options to install select components, or remove MoonLight from RetroPie
   5. Run emulationstation
-  
+
 Once EmulationStation is running, navigate to the Moonlight console, select the "Refresh" rom, then reboot emultationstation after the script is finished.
 
 ## Usage ##
@@ -42,13 +42,10 @@ I am gradually adding support for custom themes. The current version of retro mo
   * Eudora-Updated
   * flat
   * flat-dark
-  
+
   ![alt text](https://github.com/joelghill/retromoonlight/blob/master/Images/menu_simple-dark_theme.PNG "Moonlight theme")
-  
+
 
 ## Credits ##
 
 A huge thank you to [TechWizTime](https://github.com/TechWizTime) for his work in creating the install and setup script for moonlight in RetroPie. I am building on his work and could not have developed this without following his example!
-
-
-

@@ -18,36 +18,36 @@ echo -e " * 8: Exit"
 read NUM
 case $NUM in
     1)
-        sudo bash ./Scripts/Install_moonlight.sh
-        sudo bash ./Scripts/Pair_moonlight.sh
-        sudo bash ./Scripts/Install_moonlight_menu.sh
-        sudo bash ./Scripts/Install_Scripts.sh
-        sudo bash ./Scripts/Install_themes.sh
+        bash ./Scripts/Install_moonlight.sh
+        bash ./Scripts/Pair_moonlight.sh
+        bash ./Scripts/Install_moonlight_menu.sh
+        bash ./Scripts/Install_Scripts.sh
+        bash ./Scripts/Install_themes.sh
         ;;
     2)
-        sudo bash ./Scripts/Install_moonlight.sh
-        sudo bash ./Install.sh
+        bash ./Scripts/Install_moonlight.sh
+        bash ./Install.sh
         ;;
     3)
-        sudo bash ./Scripts/Pair_moonlight.sh
-        sudo bash ./Install.sh
+        bash ./Scripts/Pair_moonlight.sh
+        bash ./Install.sh
         ;;
     4)
-        sudo bash ./Scripts/Install_moonlight_menu.sh
-        sudo bash ./Install.sh
+        bash ./Scripts/Install_moonlight_menu.sh
+        bash ./Install.sh
         ;;
     5)
-        sudo bash ./Scripts/Install_Scripts.sh
-        sudo bash ./Install.sh
+        bash ./Scripts/Install_Scripts.sh
+        bash ./Install.sh
         ;;
     6)
-        sudo bash ./Scripts/Install_themes.sh
-        sudo bash ./Install.sh
+        bash ./Scripts/Install_themes.sh
+        bash ./Install.sh
         ;;
     7)
         echo -e "\nRemoving all Moonlight launch scripts..."
         rm -rf /home/pi/RetroPie/roms/moonlight
-        sudo bash ./Install.sh
+        bash ./Install.sh
         ;;
     8)
         exit 1
