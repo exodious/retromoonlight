@@ -4,7 +4,7 @@ set -euo pipefail
 
 echo -e "\nCreating Moonlight Menu for RetroPie..."
 
-CONFIG=$(<./menu_config.txt)
+# CONFIG=$(<./menu_config.txt)
 DIRECTORY=/home/pi/.emulationstation/es_systems.cfg
 
 if [ -f $DIRECTORY ]
