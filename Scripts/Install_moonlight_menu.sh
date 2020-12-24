@@ -1,22 +1,22 @@
 #!/bin/bash
 
 set -euo pipefail
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 echo -e "\nCreating Moonlight Menu for RetroPie..."
 
-# CONFIG=$(<./menu_config.txt)
-DIRECTORY=/home/pi/.emulationstation/es_systems.cfg
+MENU_CONFIG=$(cat ${DIR}/menu_config.txt)
+CONFIG_FILE="~pi/.emulationstation/es_systems.cfg"
 
-if [ -f $DIRECTORY ]
-then
+if [[ -f $CONFIG_FILE ]]; then
     echo -e "Removing Duplicate Systems File"
-    rm $DIRECTORY
+    rm $CONFIG_FILE
 fi
 
 echo -e "Copying Systems Config File"
-cp /etc/emulationstation/es_systems.cfg $DIRECTORY
+cp /etc/emulationstation/es_systems.cfg $CONFIG_FILE
 
 echo -e "Adding Moonlight to Systems"
-sed -i -e 's|</systemList>|  <system>\n    <name>moonlight</name>\n    <fullname>Moonlight</fullname>\n    <path>~/RetroPie/roms/moonlight</path>\n    <extension>.sh .SH</extension>\n    <command>bash %ROM%</command>\n    <platform>pc</platform>\n    <theme>moonlight</theme>\n  </system>\n</systemList>|g' $DIRECTORY
+sed -i -e "s|</systemList>|${MENU_CONFIG}|g" $CONFIG_FILE
 
 echo -e "\nMoonlight menu added to RetroPie..."

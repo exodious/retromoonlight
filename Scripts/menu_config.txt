@@ -1,9 +1,9 @@
     <system>
-        <name>steam</name>
-        <fullname>Steam</fullname>
-        <path>~/RetroPie/roms/moonlight</path>
+        <name>moonlight</name>
+        <fullname>Moonlight</fullname>
+        <path>~pi/RetroPie/roms/moonlight</path>
         <extension>.sh .SH</extension>
-        <command>bash %ROM%</command>
+        <command>%ROM%</command>
         <platform>pc</platform>
         <theme>moonlight</theme>
     </system>
