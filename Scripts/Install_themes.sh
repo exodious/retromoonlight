@@ -4,6 +4,6 @@ set -euo pipefail
 
 echo -e "\nInstalling Moonlight compatible themes..."
 
-cp -R ./themes ~/.emulationstation/
+sudo cp -R ./themes /etc/emulationstation/
 
 echo -e "\nThemes installed"
