@@ -13,12 +13,12 @@ fi
 echo -e "\nFetching and installing the GPG key....\n"
 
 if [ -f /home/pi/itimmer.gpg ]
-then	
+then
     echo -e "NOTE: GPG Key Exists - Skipping"
-else		
+else
     wget http://archive.itimmer.nl/itimmer.gpg
     chown pi:pi /home/pi/itimmer.gpg
-    apt-key add itimmer.gpg		
+    apt-key add itimmer.gpg
 fi
 
 echo -e "\nUpdating System..."
@@ -27,5 +27,8 @@ apt-get update -y
 echo -e "\nInstalling Moonlight..."
 apt-get install moonlight-embedded -y
 echo -e "\nInstalling Gamepad..."
-/bin/cat ./gamepad/steel-series-duo.txt >> /usr/share/moonlight/gamecontrollerdb.txt
+moonlight_cfg_dir=~/.config/moonlight
+mkdir -p $moonlight_cfg_dir
+cp /usr/share/moonlight/gamecontrollerdb.txt $moonlight_cfg_dir
+cat ./gamepad/steel-series-duo.txt >> ${moonlight_cfg_dir}/gamecontrollerdb.txt
 echo -e "\nMoonlight Installed!"
