@@ -29,7 +29,7 @@ echo -e "\nInstalling Gamepad Maps..."
 moonlight_cfg_dir=${HOME}/.config/moonlight
 mkdir -p $moonlight_cfg_dir
 cp /usr/share/moonlight/gamecontrollerdb.txt $moonlight_cfg_dir
-for map in ${DIR}/gamepad/*.map; do
+for map in ${DIR}/../gamepad/*.map; do
     cat $map >> ${moonlight_cfg_dir}/gamecontrollerdb.txt
 done
 
