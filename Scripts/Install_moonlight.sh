@@ -12,7 +12,7 @@ repo_url="http://archive.itimmer.nl/raspbian/moonlight"
 if apt-cache policy | grep -q "$repo_url"; then
     echo -e "NOTE: Moonlight Source Exists - Skipping"
 else
-    sudo echo "deb $repo_url $rpiversion main" >> /etc/apt/sources.list.d/moonlight.list
+    sudo bash -c "echo 'deb $repo_url $rpiversion main' >> /etc/apt/sources.list.d/moonlight.list"
     echo -e "Added Moonlight to Sources List"
 fi
 
