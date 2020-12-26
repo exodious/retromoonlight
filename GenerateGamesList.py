@@ -6,6 +6,7 @@ import os
 import stat
 
 RefreshListScript = 'Refresh.sh'
+ForceQuitScript = 'Force_Quit.sh'
 
 BashHeader = '#!/bin/bash\n'
 StreamString = 'moonlight stream -mapping /home/pi/.config/moonlight/gamecontrollerdb.txt -1080 -fps 60 -app '
@@ -22,8 +23,8 @@ def clear_directory(folder_path):
             file_path = os.path.join(folder_path, the_file)
             if os.path.isfile(file_path) \
                 and the_file != RefreshListScript \
-                and not the_file.endswith(('.txt', 'py')) \
-                and not the_file == "Force_Quit.sh":
+                and the_file != ForceQuitScript \
+                and not the_file.endswith(('.txt', 'py')):
                     os.unlink(file_path)
         except Exception as e:
             print(e)
