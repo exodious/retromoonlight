@@ -62,7 +62,7 @@ def create_script(game_title):
     Creates the script to run a game title
     :param game_title: The name of the game to launch
     """
-    script = f'{BashHeader}{StreamString}"{game_title}"'
+    script = f'{BashHeader}{StreamString}"{game_title}"\n'
     print(f'\nCreating a script for {game_title}:')
     print(script)
     return script
