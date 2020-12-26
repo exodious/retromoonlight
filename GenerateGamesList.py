@@ -53,7 +53,7 @@ def is_valid_listing(game_listing):
     try:
         int(game_listing.split(".")[0])
         return True
-    except Exception as e:
+    except Exception:
         return False
 
 
