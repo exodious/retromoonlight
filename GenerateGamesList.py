@@ -61,8 +61,8 @@ def create_script(game_title):
     Creates the script to run a game title
     :param game_title: The name of the game to launch
     """
-    script = '{}{}\"{}\"'.format(BashHeader, StreamString, game_title)
-    print('\nCreating a script for {}:'.format(game_title))
+    script = f'{BashHeader}{StreamString}"{game_title}"'
+    print(f'\nCreating a script for {game_title}:')
     print(script)
     return script
 
@@ -74,8 +74,8 @@ def write_script(script, game_title):
     :param game_title: The game title to be used as the file name
     """
     try:
-        script_name = '{}{}.sh'.format(roms_directory, game_title.replace(":", ""))
-        print('Writing {} to disk...'.format(script_name))
+        script_name = f'{roms_directory}{game_title.replace(":", "")}.sh'
+        print(f'Writing {script_name} to disk...')
         f = open(script_name, "w+")
         f.write(script)
         f.close()
